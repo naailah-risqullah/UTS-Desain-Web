@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="auth">
+
+    <section class="art" aria-label="Branding">
+      <img class="art__img" src="ilustrasi.jpeg" alt="Hand-drawn illustration">
+
+      <div class="art__content">
+        <h2 class="art__title">Hello, welcome!</h2>
+        <p class="art__text">Let’s get started!</p>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="judul-login">
+      <div class="box">
+
+        <a href="#" class="back" aria-label="Back to home"><span aria-hidden="true">&larr;</span></a>
+
+        <a href="#" class="logo" aria-label="Studio home">
+          <span class="logo__mark" aria-hidden="true"></span>
+          Match Flower
+        </a>
+
+        <h1 id="judul-login" class="box__title">Sign in to Get Started</h1>
+
+        <button type="button" class="btn btn--google">
+          <span class="g-icon" aria-hidden="true">G</span>
+          Sign in with Google
+        </button>
+
+        <div class="divider" role="separator"><span>or</span></div>
+
+        <form action="#" method="post">
+
+          <div class="field">
+            <label for="email">Email or username</label>
+            <input type="text" id="email" name="email" autocomplete="username" required>
+          </div>
+
+          <div class="field">
+            <div class="field__row">
+              <label for="password">Password</label>
+              <a href="#" class="link">Forgot password?</a>
+            </div>
+            <input type="password" id="password" name="password" autocomplete="current-password" required>
+          </div>
+
+          <div class="check">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Remember me</label>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Sign in</button>
+        </form>
+
+        <p class="box__footer">Don't have an account? <a href="#" class="link">Sign up</a></p>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

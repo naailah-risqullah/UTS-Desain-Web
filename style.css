@@ -1,0 +1,262 @@
+:root {
+  --hijau: #2f5d2a;
+  --hijau-gelap: #1f4a1c;
+  --matcha: #9dbb6f;
+  --matcha-muda: #c8dca0;
+  --matcha-tua: #6f9a45;
+  --krem: #f3f7e6;
+  --pink: #f7b6c8;
+  --kuning: #fff0a8;
+  --teks-art: #ffffff;
+  --teks: #1f2937;
+  --teks-redup: #4b5563;
+  --garis: #9ca3af;
+  --putih: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Fredoka", "Baloo 2", "Comic Sans MS", "Chalkboard SE", cursive;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--teks);
+  background: var(--putih);
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+a { color: var(--hijau); }
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.art {
+  position: relative;
+  overflow: hidden;
+  min-height: 18rem;
+  padding: 2rem 1.5rem;
+  color: var(--teks-art);
+  background-color: var(--matcha);
+}
+
+.art__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.art__content {
+    position: relative;
+    z-index: 2;
+    max-width: 24rem;
+}
+
+.art__badge {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.125rem 1rem;
+  font-weight: 600;
+  background: var(--krem);
+  border: 2px dashed var(--teks-art);
+  border-radius: 999px;
+}
+
+.art__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.art__text { font-size: 1.125rem; }
+
+.panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+.box {
+  width: 100%;
+  max-width: 24rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--teks);
+  text-decoration: none;
+}
+.logo__mark {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 8px 0 8px 0;
+  background: var(--hijau);
+}
+
+.box__title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.btn--google {
+  color: var(--teks);
+  background: var(--putih);
+  border: 2px solid var(--garis);
+}
+.btn--google:hover { background: #f3f4f6; }
+
+.btn--primary {
+  margin-top: 1.25rem;
+  color: var(--putih);
+  background: var(--hijau);
+  border: 2px solid var(--hijau);
+}
+.btn--primary:hover { background: var(--hijau-gelap); }
+
+.back {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  color: var(--teks);
+  text-decoration: none;
+  border: 2px solid var(--garis);
+  border-radius: 50%;
+}
+.back:hover { background: #f3f4f6; }
+
+.g-icon {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  color: var(--teks-redup);
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: var(--garis);
+  border-radius: 2px;
+}
+
+.field { margin-bottom: 1.25rem; }
+
+.field label,
+.check label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.field label { display: block; margin-bottom: 0.375rem; }
+
+.field__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1.0625rem;
+  color: var(--teks);
+  background: var(--putih);
+  border: 2px solid var(--garis);
+  border-radius: 14px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.check input { width: 1.125rem; height: 1.125rem; accent-color: var(--hijau); }
+
+.box__footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--teks-redup);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--hijau);
+  outline-offset: 2px;
+}
+
+@media (min-width: 1024px) {
+  .auth { flex-direction: row; }
+
+  .art,
+  .panel { flex: 1; }
+
+  .art {
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem;
+  }
+
+  .art__content { max-width: 40rem; }
+
+  .art__title { font-size: 3.5rem; }
+  .art__text  { font-size: 1.5rem; }
+}
+
+@media (max-width: 767px) {
+  .art { display: none; }
+}
